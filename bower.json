@@ -1,0 +1,26 @@
+{
+  "name": "angular-ui-dialog",
+  "version": "0.0.1",
+  "description": "a card number input component - a angular directive which support value real-time formatting as card number",
+  "author": "https://github.com/zjuwwq/angular-ui-dialog/graphs/contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/zjuwwq/angular-ui-dialog",
+  "main": "./src/angular-ui-dialog.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "bower_components",
+    "test*",
+    "demo*",
+    "gruntFile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.2.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.2.x",
+    "jquery": "~2.x"
+  }
+}

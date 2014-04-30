@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="demoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>cardNo demo</title>
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../src/angular-ui-dialog.js"></script>
+</head>
+<body ng-controller="demoCtrl">
+	<form>
+		卡号：<input ng-model="code" type="text" ui-card-no name="code">
+		<div>{{code}}</div>
+	</form>
+	<script>
+		angular.module('demoApp', ['zjuwwq.ui.cardNo'])
+		.controller('demoCtrl', function($scope){
+			$scope.code = '564783982';
+		});
+	</script>
+</body>
+</html>
