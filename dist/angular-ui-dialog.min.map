@@ -1,0 +1,1 @@
+{"version":3,"file":"angular-ui-dialog.min.js","sources":["../src/angular-ui-dialog.js"],"names":["angular","module","directive","restrict","replace","transclude","scope","title","close","template"],"mappings":"AAAAA,QAAQC,OAAO,uBACbC,UAAU,WAAY,WACtB,OACCC,SAAU,IACVC,SAAS,EACTC,YAAY,EACZC,OACCC,MAAO,IACPC,MAAO,YAERC,SAAU"}

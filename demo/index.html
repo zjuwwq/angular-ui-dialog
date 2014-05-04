@@ -2,19 +2,45 @@
 <html ng-app="demoApp">
 <head>
 	<meta charset="UTF-8">
-	<title>cardNo demo</title>
+	<title>dialog demo</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		.m-dialog .wrap{width: 498px;margin-top: 100px;}
+	</style>
 	<script src="../bower_components/angular/angular.js"></script>
 	<script src="../src/angular-ui-dialog.js"></script>
 </head>
 <body ng-controller="demoCtrl">
-	<form>
-		卡号：<input ng-model="code" type="text" ui-card-no name="code">
-		<div>{{code}}</div>
-	</form>
+	<ui-dialog class="m-dialog" title="登录" ng-show="isShow" on-close="hideDialog()">
+		<form class="m-form" novalidate>
+			<table>
+				<tr>
+					<th><label>用户名：</label></th>
+					<td>
+						<input type="text" ng-model="userName" name="userName" required>
+					</td>
+				</tr>
+				<tr>
+					<th><label>密码：</label></th>
+					<td><input type="password" ng-model="password" name="password" required></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<input type="button" value="登　录"><input type="button" value="取　消" ng-click="hideDialog()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</ui-dialog>
+		
 	<script>
-		angular.module('demoApp', ['zjuwwq.ui.cardNo'])
+		angular.module('demoApp', ['zjuwwq.ui.dialog'])
 		.controller('demoCtrl', function($scope){
-			$scope.code = '564783982';
+			$scope.isShow = true;
+			$scope.hideDialog = function(){
+				$scope.isShow = false;
+			};
 		});
 	</script>
 </body>
